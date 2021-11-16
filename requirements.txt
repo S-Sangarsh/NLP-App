@@ -1,0 +1,7 @@
+python=3.6.13
+streamlit=1.2.0
+spacy=3.0.6
+spacy-legacy=3.0.6
+textblob=0.15.3
+heapq 
+string 
