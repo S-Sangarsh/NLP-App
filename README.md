@@ -11,4 +11,4 @@
 Click <a href="https://textiffy.herokuapp.com/">here</a>  or type https://textiffy.herokuapp.com/ for visiting the site.
 
 ## A GLIMPSE OF THE WEB APP:
-<img src='2021-10-31.png'></img>
+<img src='2021-11-16 (2).png'></img>
