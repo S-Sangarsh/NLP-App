@@ -15,6 +15,9 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
+from spacy.lang.en.stop_words import STOP_WORDS
+from string import punctuation
+import en_core_web_sm
 
 punctuation = punctuation+'/n' 
 
@@ -22,7 +25,7 @@ punctuation = punctuation+'/n'
 # Function for Sumy Summarization
 def spacy_summarizer(docx):
     stopwords = list(STOP_WORDS)
-    nlp = spacy.load('en_core_web_sm')
+    nlp = en_core_web_sm.load()
     doc = nlp(docx)
     mytokens = [token.text for token in doc]
     
@@ -62,7 +65,7 @@ def spacy_summarizer(docx):
 # Function to Analyse Tokens and Lemma
 @st.cache
 def text_analyzer(my_text):
-	nlp = spacy.load('en_core_web_sm')
+	nlp = en_core_web_sm.load()
 	docx = nlp(my_text)
 	allData = [('"Token":{},\n"Lemma":{}'.format(token.text,token.lemma_))for token in docx ]
 	return allData
@@ -70,7 +73,7 @@ def text_analyzer(my_text):
 # Function For Extracting Entities
 @st.cache
 def entity_analyzer(my_text):
-	nlp = spacy.load('en_core_web_sm')
+	nlp = en_core_web_sm.load()
 	docx = nlp(my_text)
 	tokens = [ token.text for token in docx]
 	entities = [(entity.text,entity.label_)for entity in docx.ents]
