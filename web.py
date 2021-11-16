@@ -128,7 +128,7 @@ def main():
 			st.success(summary_result)
 
 	st.sidebar.subheader("NLP App")
-	st.sidebar.info("Beta Version, Complete App Coming Soom")
+	st.sidebar.info("Beta Version, Complete App Coming Soon")
     
 
 
